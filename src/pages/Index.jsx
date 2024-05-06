@@ -32,6 +32,7 @@ const Index = () => {
   return (
     <Container maxW="container.md" p={4}>
       <VStack spacing={8}>
+        <Heading size="xl" textAlign="center" mb={6} color="brand.700">My Tasks</Heading>
         <Heading size="lg">Todo App</Heading>
         <Flex as="form" onSubmit={(e) => { e.preventDefault(); addTask(); }} width="full">
           <Input
