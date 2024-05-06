@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, Container, Flex, Heading, IconButton, Input, List, ListItem, Text, useToast, VStack } from '@chakra-ui/react';
+import { Heading, Flex, Container, Input, Button, List, ListItem, Text, IconButton, useToast } from '@chakra-ui/react';
 import { FaTrash, FaCheckCircle } from 'react-icons/fa';
 
 const Index = () => {
@@ -31,6 +31,9 @@ const Index = () => {
 
   return (
     <Container maxW="container.md" p={4}>
+      <Flex as="header" width="full" p={4} bg="brand.800" align="center" justify="center">
+        <Heading size="xl" color="white">My Tasks</Heading>
+      </Flex>
       <VStack spacing={8}>
         <Heading size="lg">Todo App</Heading>
         <Flex as="form" onSubmit={(e) => { e.preventDefault(); addTask(); }} width="full">
